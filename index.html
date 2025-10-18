@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Setting the charset, stylesheet calls, and website title -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Appointment Calendar Website</title>
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Calendar section -->
+        <div class="calendarPanel">
+            <div class="calendar">
+                <div class="month">
+                    <i class="fa fa-angle-left prev"></i>
+                    <div class="date"></div>
+                    <i class="fa fa-angle-right next"></i>
+                </div>
+
+                <!-- Weekdays Labels -->
+                <div class="weekdays">
+                    <div>sun</div>
+                    <div>mon</div>
+                    <div>tue</div>
+                    <div>wed</div>
+                    <div>thu</div>
+                    <div>fri</div>
+                    <div>sat</div>
+                </div>
+                <div class="days">
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointment section -->
+        <div class="appointmentPanel">
+            <button class="book-appointment">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div class="today-date">
+                <div class="appointment-day"></div>
+                <div class="appointment-date"></div>
+            </div>
+            <div class="appointments">
+            </div>
+            <div class="add-appointment-wrapper">
+                <div class="add-appointment-header">
+                    <div class="type">Book Appointment</div>
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="add-appointment-body">
+                    <div class="add-appointment-input">
+                        <input type="text" placeholder="Appointment Type" class="appointment-name" />
+                    </div>
+                    <div class="add-appointment-input">
+                        <select class="appointment-time">
+
+                            <!-- Appointment slots users can book -->
+                            <option value="" disabled selected>Select Appointment Time</option>
+                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                            <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                            <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                            <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                            <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+
+                        </select>
+                    </div>
+                    <div class="add-appointment-input">
+                        <input type="text" placeholder="Appointment Reasoning" class="appointment-reason" />
+                    </div>
+                </div>
+                <div class="add-appointment-footer">
+                    <button class="book-appointment-btn">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
